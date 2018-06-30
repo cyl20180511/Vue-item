@@ -2,7 +2,7 @@
   <div class="cmt-container">
     <h3>发表评论</h3>
     <hr>
-    <textarea placeholder="请输入要BB的内容（做多吐槽120字）" maxlength="120"></textarea>
+    <textarea placeholder="请输入要BB的内容（做多吐槽120字）" maxlength="120" v-model="msg"></textarea>
 
     <mt-button type="primary" size="large" @click="postComment">发表评论</mt-button>
 
@@ -28,8 +28,8 @@ export default {
   data() {
     return {
       pageIndex: 1, // 默认展示第一页数据
-      comments: [],// 所有的评论数据
-      msg: ''
+      comments: [], // 所有的评论数据
+      msg: "" // 评论输入的内容
     };
   },
   created() {
